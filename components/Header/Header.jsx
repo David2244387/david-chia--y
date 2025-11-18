@@ -2,10 +2,10 @@ const Header = ({ sections, activeSection, onNavigate }) => {
   return (
     <header className="site-header">
       <div className="site-header__brand">
-        <span className="brand-mark">MA</span>
+        <span className="brand-mark">י"ל</span>
         <div>
-          <p className="brand-title">מיכל אפילציה</p>
-          <p className="brand-subtitle">הסרת שיער לצמיתות בשיטה המתקדמת ביותר</p>
+          <p className="brand-title">יהודית לוי</p>
+          <p className="brand-subtitle">קוסמטיקאית מקצועית - טיפולי יופי וטיפוח</p>
         </div>
       </div>
       <nav className="site-nav">

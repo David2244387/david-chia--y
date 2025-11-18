@@ -4,6 +4,7 @@ import Footer from './components/Footer/Footer'
 import Home from './pages/Home/Home'
 import Treatments from './pages/Treatments/Treatments'
 import Gallery from './pages/Gallery/Gallery'
+import treatmentRoomImage from './assets/חדר טיפולים.jpeg'
 import './App.css'
 
 const sections = [
@@ -20,7 +21,10 @@ function App() {
   )
 
   return (
-    <div className="app-shell">
+    <div 
+      className="app-shell" 
+      style={{ '--treatment-room-bg': `url(${treatmentRoomImage})` }}
+    >
       <Header sections={sections} activeSection={activeSection} onNavigate={setActiveSection} />
       <main className="site-main">
         <ActivePage onNavigate={setActiveSection} />

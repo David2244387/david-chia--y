@@ -1,11 +1,75 @@
-/* מודול סגנונות לכרטיס טיפול (TreatmentCard)
-   הוסיפו כאן מחלקות מקומיות לשימוש בתוך רכיב TreatmentCard.jsx
-*/
-
-/* דוגמה:
 .treatmentCard {
-  border-radius: 12px;
+  border: 1px solid #f2e4d9;
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #fff9f5;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-*/
+
+.treatmentCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.treatmentCard__image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #fcd8c0, #f7a7b8);
+}
+
+.treatmentCard__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.treatmentCard__content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.treatmentCard__content h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #2f1e16;
+  font-weight: 600;
+}
+
+.treatmentCard__content p {
+  margin: 0;
+  color: #6d5244;
+  line-height: 1.6;
+}
+
+.treatmentCard__list {
+  margin: 0.5rem 0 0 0;
+  padding-right: 1.25rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.treatmentCard__list li {
+  color: #7a5b4a;
+  line-height: 1.6;
+  position: relative;
+}
+
+.treatmentCard__list li::before {
+  content: '•';
+  position: absolute;
+  right: -1.25rem;
+  color: #f6b09c;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
 
 

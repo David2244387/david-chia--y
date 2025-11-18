@@ -1,44 +1,73 @@
 import TreatmentCard from '../../components/TreatmentCard/TreatmentCard'
+import eyelashesImage from '../../assets/הרמת ריסים.jpg'
+import eyebrowsImage from '../../assets/גבות.jpg'
+import straighteningImage from '../../assets/החלקות.jpeg'
+import styles from './Treatments.module.css'
 
-const treatments = [
-  {
-    title: 'פנים ',
-    description: 'טיפול ממוקד לעור עדין בעזרת קירור מתקדם והפחתת אדמומיות.',
-    duration: '30 דקות',
-    price: '₪80',
-  },
-  {
-    title: 'ידיים ',
-    description: 'כיסוי מלא מכף היד ועד הכתף לקבלת מראה נקי וחלק לאורך זמן.',
-    duration: '30 דקות',
-    price: '₪80',
-  },
-  {
-    title: 'רגליים ',
-    description: 'טיפול יסודי בשתי הרגליים עם התאמה לעור כהה ובהיר.',
-    duration: '30 דקות',
-    price: '₪80',
-  },
-]
+const Treatments = () => {
+  const treatments = [
+    {
+      title: 'ריסים',
+      description: 'הרמת ריסים מקצועית לתוצאות מושלמות',
+      image: eyelashesImage,
+      contents: [
+        'הרמת ריסים קלאסית',
+        'הרמת ריסים ווליום',
+        'הרמת ריסים היברידית',
+        'טיפול מקצועי ואיכותי',
+        'תוצאות ארוכות טווח'
+      ]
+    },
+    {
+      title: 'גבות',
+      description: 'עיצוב והרמת גבות מדויקת',
+      image: eyebrowsImage,
+      contents: [
+        'הרמת גבות מקצועית',
+        'עיצוב גבות לפי מבנה הפנים',
+        'צביעת גבות',
+        'טיפול עדין ומדויק',
+        'תוצאות טבעיות ומרשימות'
+      ]
+    },
+    {
+      title: 'החלקות',
+      description: 'החלקות שיער איכותיות ומקצועיות',
+      image: straighteningImage,
+      contents: [
+        'החלקת שיער ברזילאית',
+        'החלקת שיער יפנית',
+        'החלקת שיער קראטין',
+        'חומרים איכותיים ובטוחים',
+        'תוצאות חלקות ומבריקות'
+      ]
+    }
+  ]
 
-const Treatments = () => (
-  <section className="section" id="treatments">
-    <div className="section__content">
-      <p className="eyebrow">טיפולי הדגל</p>
-      <h2>התוצאות הטובות ביותר בלוח זמנים שמתאים לך</h2>
-      <p>
-        כל טיפול מחושב לפי חצי שעה (₪80), וכולל אבחון ראשוני, מדידות מדויקות והתאמה אישית
-        לעור ולגוון השיער, כדי להבטיח תוצאה מיטבית ללא פשרות.
-      </p>
-      <div className="treatment-grid">
-        {treatments.map((treatment) => (
-          <TreatmentCard key={treatment.title} {...treatment} />
-        ))}
+  return (
+    <section className="section">
+      <div className="section__content">
+        <p className="eyebrow">הטיפולים שלנו</p>
+        <h2>טיפולי יופי מקצועיים</h2>
+        <p>
+          אצלנו תמצאי מגוון רחב של טיפולי יופי מקצועיים, המבוצעים בחומרים איכותיים
+          ובטכניקות מתקדמות. כל טיפול מותאם אישית לצרכים שלך כדי להבטיח את התוצאות הטובות ביותר.
+        </p>
+        <div className={styles.treatmentsGrid}>
+          {treatments.map((treatment) => (
+            <TreatmentCard
+              key={treatment.title}
+              title={treatment.title}
+              description={treatment.description}
+              image={treatment.image}
+              contents={treatment.contents}
+            />
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
-)
+    </section>
+  )
+}
 
 export default Treatments
-
 

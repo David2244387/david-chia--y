@@ -1,11 +1,14 @@
-/* מודול סגנונות לדף הטיפולים
-   הוסיפו כאן מחלקות מקומיות לשימוש בתוך רכיב Treatments.jsx
-*/
-
-/* דוגמה:
-.treatmentGrid {
+.treatmentsGrid {
+  margin-top: 2rem;
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
 }
-*/
 
+@media (max-width: 720px) {
+  .treatmentsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
 
